@@ -1,0 +1,47 @@
+Four main points 
+
+- Physical Significance
+- how to initialization the pointer
+- how to move the pointer
+- When to stop
+
+# Problems Set of MANGA Company
+
+1. Given a sorted array find the no of pair which have a sum ==k
+
+```cpp
+#include <iostream>
+using namespace std;
+int Kth_sum_checker(int Kth){
+	int arr[10]={1,2,3,4,5,5,5,6,1,6};
+	//two pointer
+	int start=0,end=9;
+	int count=0;
+	while(start<end){
+		//condition 1) end+start<Kth
+		//start++;
+		//condition 2) end+start>Kth
+		//end++;
+		//condition 3) end+start=Kth
+		/*
+		}
+		*/
+		if(arr[start]+arr[end]>Kth)
+			start++;
+		
+		else if(arr[start]+arr[end]>Kth)
+			end--;
+		
+		else 
+			count++;
+
+		
+
+	}
+	return count;
+}
+int main(){
+	cout<<Kth_sum_checker(11)<<endl;
+	return 0;	
+}
+```
